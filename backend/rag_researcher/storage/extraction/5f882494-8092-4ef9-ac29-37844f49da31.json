@@ -1,0 +1,355 @@
+{
+  "doc_id": "5f882494-8092-4ef9-ac29-37844f49da31",
+  "filename": "fake_curriculum.pdf",
+  "file_size": 2484,
+  "file_hash": "fdae5fdcfea104804d18fb9fa7c03e2479c1f6dd8db4dfe0b97b7f76eaacea5f",
+  "ingestion_timestamp": "2026-01-26T04:13:36.648552",
+  "processing_duration": 0.005999,
+  "extraction_version": "4.0.0",
+  "pages": [
+    {
+      "page_number": 1,
+      "text_blocks": [
+        {
+          "block_id": "block_0",
+          "text": "Grade 8 – Integrated Curriculum",
+          "type": "text",
+          "bbox": [
+            78.0,
+            77.25,
+            221.38999938964844,
+            90.98999786376953
+          ]
+        },
+        {
+          "block_id": "block_1",
+          "text": "Chapter 1: Biology – Photosynthesis",
+          "type": "text",
+          "bbox": [
+            78.0,
+            101.25,
+            239.18997192382812,
+            114.98999786376953
+          ]
+        },
+        {
+          "block_id": "block_2",
+          "text": "Lesson 1: Introduction to Photosynthesis",
+          "type": "text",
+          "bbox": [
+            78.0,
+            119.25,
+            258.0999755859375,
+            132.99000549316406
+          ]
+        },
+        {
+          "block_id": "block_3",
+          "text": "Competence: Understand the role of sunlight in plant nutrition",
+          "type": "text",
+          "bbox": [
+            78.0,
+            137.25,
+            349.7999572753906,
+            150.99000549316406
+          ]
+        },
+        {
+          "block_id": "block_4",
+          "text": "Lesson 2: The Chlorophyll Process",
+          "type": "text",
+          "bbox": [
+            78.0,
+            161.25,
+            233.0599822998047,
+            174.99000549316406
+          ]
+        },
+        {
+          "block_id": "block_5",
+          "text": "Competence: Explain how chlorophyll captures light energy",
+          "type": "text",
+          "bbox": [
+            78.0,
+            179.25,
+            340.3299865722656,
+            192.99000549316406
+          ]
+        },
+        {
+          "block_id": "block_6",
+          "text": "Lesson 3: Gas Exchange in Plants",
+          "type": "text",
+          "bbox": [
+            78.0,
+            203.25,
+            230.85997009277344,
+            216.99000549316406
+          ]
+        },
+        {
+          "block_id": "block_7",
+          "text": "Competence: Identify oxygen and carbon dioxide roles",
+          "type": "text",
+          "bbox": [
+            78.0,
+            221.25,
+            319.22998046875,
+            234.99000549316406
+          ]
+        },
+        {
+          "block_id": "block_8",
+          "text": "Chapter 2: History – The French Revolution",
+          "type": "text",
+          "bbox": [
+            78.0,
+            245.25,
+            270.8499755859375,
+            258.989990234375
+          ]
+        },
+        {
+          "block_id": "block_9",
+          "text": "Lesson 1: Social Classes Before the Revolution",
+          "type": "text",
+          "bbox": [
+            78.0,
+            263.25,
+            288.64996337890625,
+            276.989990234375
+          ]
+        },
+        {
+          "block_id": "block_10",
+          "text": "Competence: Describe the three estates and their roles",
+          "type": "text",
+          "bbox": [
+            78.0,
+            281.25,
+            323.1099548339844,
+            294.989990234375
+          ]
+        },
+        {
+          "block_id": "block_11",
+          "text": "Lesson 2: Economic Crisis",
+          "type": "text",
+          "bbox": [
+            78.0,
+            305.25,
+            195.80999755859375,
+            318.989990234375
+          ]
+        },
+        {
+          "block_id": "block_12",
+          "text": "Competence: Explain how debt and taxation led to unrest",
+          "type": "text",
+          "bbox": [
+            78.0,
+            323.2499694824219,
+            331.4699401855469,
+            336.9899597167969
+          ]
+        },
+        {
+          "block_id": "block_13",
+          "text": "Lesson 3: Political System of the Monarchy",
+          "type": "text",
+          "bbox": [
+            78.0,
+            347.2499694824219,
+            269.19000244140625,
+            360.9899597167969
+          ]
+        },
+        {
+          "block_id": "block_14",
+          "text": "Competence: Understand absolute monarchy",
+          "type": "text",
+          "bbox": [
+            78.0,
+            365.2499694824219,
+            279.199951171875,
+            378.9899597167969
+          ]
+        },
+        {
+          "block_id": "block_15",
+          "text": "Chapter 3: Mathematics – Fractions",
+          "type": "text",
+          "bbox": [
+            78.0,
+            389.2499694824219,
+            236.38998413085938,
+            402.9899597167969
+          ]
+        },
+        {
+          "block_id": "block_16",
+          "text": "Lesson 1: Understanding Fractions",
+          "type": "text",
+          "bbox": [
+            78.0,
+            407.2499694824219,
+            233.0699920654297,
+            420.9899597167969
+          ]
+        },
+        {
+          "block_id": "block_17",
+          "text": "Competence: Identify numerator and denominator",
+          "type": "text",
+          "bbox": [
+            78.0,
+            425.2499694824219,
+            298.6599426269531,
+            438.9899597167969
+          ]
+        },
+        {
+          "block_id": "block_18",
+          "text": "Lesson 2: Adding Fractions",
+          "type": "text",
+          "bbox": [
+            78.0,
+            449.2499694824219,
+            199.16998291015625,
+            462.9899597167969
+          ]
+        },
+        {
+          "block_id": "block_19",
+          "text": "Competence: Add fractions with same denominator",
+          "type": "text",
+          "bbox": [
+            78.0,
+            467.2499694824219,
+            304.75994873046875,
+            480.9899597167969
+          ]
+        },
+        {
+          "block_id": "block_20",
+          "text": "Lesson 3: Multiplying Fractions",
+          "type": "text",
+          "bbox": [
+            78.0,
+            491.2499694824219,
+            215.27000427246094,
+            504.9899597167969
+          ]
+        },
+        {
+          "block_id": "block_21",
+          "text": "Competence: Multiply simple fractions",
+          "type": "text",
+          "bbox": [
+            78.0,
+            509.25,
+            246.37998962402344,
+            522.989990234375
+          ]
+        },
+        {
+          "block_id": "block_22",
+          "text": "Chapter 4: Geography – Climate Zones",
+          "type": "text",
+          "bbox": [
+            78.0,
+            533.25,
+            252.5199737548828,
+            546.989990234375
+          ]
+        },
+        {
+          "block_id": "block_23",
+          "text": "Lesson 1: Tropical Climate",
+          "type": "text",
+          "bbox": [
+            78.0,
+            551.25,
+            196.3699951171875,
+            564.989990234375
+          ]
+        },
+        {
+          "block_id": "block_24",
+          "text": "Competence: Identify characteristics of tropical regions",
+          "type": "text",
+          "bbox": [
+            78.0,
+            569.25,
+            320.8699951171875,
+            582.989990234375
+          ]
+        },
+        {
+          "block_id": "block_25",
+          "text": "Lesson 2: Temperate Climate",
+          "type": "text",
+          "bbox": [
+            78.0,
+            593.25,
+            209.1599884033203,
+            606.989990234375
+          ]
+        },
+        {
+          "block_id": "block_26",
+          "text": "Competence: Explain seasonal changes",
+          "type": "text",
+          "bbox": [
+            78.0,
+            611.25,
+            256.41998291015625,
+            624.989990234375
+          ]
+        },
+        {
+          "block_id": "block_27",
+          "text": "Lesson 3: Polar Climate",
+          "type": "text",
+          "bbox": [
+            78.0,
+            635.25,
+            184.14999389648438,
+            648.989990234375
+          ]
+        },
+        {
+          "block_id": "block_28",
+          "text": "Competence: Describe life in cold regions",
+          "type": "text",
+          "bbox": [
+            78.0,
+            653.25,
+            262.5099792480469,
+            666.989990234375
+          ]
+        }
+      ],
+      "tables": [],
+      "images": [],
+      "page_metadata": {
+        "ocr_processed": false
+      }
+    }
+  ],
+  "metadata": {
+    "source": "upload",
+    "file_type": "pdf",
+    "created_at": "2026-01-26T04:13:36.647554",
+    "original_filename": "fake_curriculum.pdf",
+    "file_size": 2484
+  },
+  "processing_stats": {
+    "page_count": 1,
+    "text_blocks_count": 29,
+    "tables_count": 0,
+    "images_count": 0
+  },
+  "warnings": [],
+  "errors": []
+}

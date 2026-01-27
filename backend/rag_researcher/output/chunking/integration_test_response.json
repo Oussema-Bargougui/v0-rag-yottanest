@@ -1,0 +1,27 @@
+{
+  "batch_id": "c6ebd9b1-b9fd-4b73-b5ee-f0f27cd04f68",
+  "documents": [
+    {
+      "doc_id": "9ba12d30-a943-439a-ad84-f99aacd57a1e",
+      "filename": "test_banking_doc.md",
+      "status": "processed",
+      "cleaned_path": "storage\\cleaned\\9ba12d30-a943-439a-ad84-f99aacd57a1e.json",
+      "chunking": {
+        "semantic_percentile": {
+          "count": 0,
+          "path": "storage\\chunks\\9ba12d30-a943-439a-ad84-f99aacd57a1e\\semantic_chunks.json",
+          "preview": []
+        },
+        "similarity_cluster": {
+          "count": 0,
+          "path": "storage\\chunks\\9ba12d30-a943-439a-ad84-f99aacd57a1e\\cluster_chunks.json",
+          "preview": []
+        }
+      },
+      "json_path": "storage\\extraction\\9ba12d30-a943-439a-ad84-f99aacd57a1e.json"
+    }
+  ],
+  "total_files": 1,
+  "successful": 1,
+  "failed": 0
+}

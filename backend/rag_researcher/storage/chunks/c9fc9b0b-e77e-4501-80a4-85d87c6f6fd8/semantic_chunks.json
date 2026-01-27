@@ -1,0 +1,26 @@
+[
+  {
+    "chunk_id": "1f18c91e-1138-4a1e-9489-2eef8cff82d3",
+    "doc_id": "c9fc9b0b-e77e-4501-80a4-85d87c6f6fd8",
+    "text": "Grade 8 - Comprehensive Curriculum Chapter: Biology - Human Body Lesson 1: Cells and Tissues Competence: Understand the basic unit of life Lesson 2: Digestive System Competence: Explain digestion process Lesson 3: Respiratory System Competence: Describe breathing and gas exchange Lesson 4: Circulatory System Competence: Understand blood circulation Lesson 5: Nervous System Competence: Identify brain and nerve functions Chapter: Biology - Plants Lesson 1: Photosynthesis Competence: Understand how plants make food Lesson 2: Transpiration Competence: Explain water movement in plants Lesson 3: Reproduction in Plants Competence: Describe plant reproduction Lesson 4: Plant Nutrition Competence: Identify essential nutrients Lesson 5: Seed Germination Competence: Understand growth conditions Chapter: History - Ancient Civilizations Lesson 1: Mesopotamia Competence: Understand early human settlements Lesson 2: Ancient Egypt Competence: Describe life along the Nile Lesson 3: Indus Valley Competence: Explain urban planning Lesson 4: Ancient China Competence: Identify dynasties Lesson 5: Ancient Greece Competence: Understand democracy origins Chapter: History - Modern History Lesson 1: French Revolution Competence: Understand causes and effects Lesson 2: Industrial Revolution Competence: Explain industrial changes Lesson 3: World War I Competence: Identify causes Lesson 4: World War II Competence: Understand global impact Lesson 5: Cold War Competence: Describe political tensions Chapter: Mathematics - Arithmetic Lesson 1: Addition Competence: Perform basic addition Lesson 2: Subtraction Competence: Perform basic subtraction Lesson 3: Multiplication Competence: Understand multiplication Lesson 4: Division Competence: Perform division Lesson 5: Order of Operations Competence: Apply correct order Chapter: Mathematics - Fractions Lesson 1: Introduction to Fractions Competence: Identify numerator and denominator Lesson 2: Equivalent Fractions Competence: Find equal fractions Lesson 3: Adding Fractions Competence: Add fractions correctly Lesson 4: Subtracting Fractions Competence: Subtract fractions Lesson 5: Multiplying Fractions Competence: Multiply fractions Chapter: Geography - Physical Geography Lesson 1: Mountains Competence: Identify mountain types Lesson 2: Rivers Competence: Understand river systems Lesson 3: Deserts Competence: Describe desert climate Lesson 4: Oceans Competence: Identify oceans Lesson 5: Volcanoes Competence: Explain volcanic activity Chapter: Geography - Climate Lesson 1: Tropical Climate Competence: Understand tropical regions Lesson 2: Temperate Climate Competence: Explain seasons Lesson 3: Polar Climate Competence: Describe cold regions Lesson 4: Climate Change Competence: Understand global warming Lesson 5: Weather Patterns Competence: Identify weather types Chapter: Physics - Basics Lesson 1: Force Competence: Understand force Lesson 2: Motion Competence: Describe movement Lesson 3: Energy Competence: Identify energy types Lesson 4: Light Competence: Explain light behavior Lesson 5: Sound Competence: Understand sound waves Chapter: Chemistry - Matter Lesson 1: States of Matter Competence: Identify solid liquid gas Lesson 2: Changes of State Competence: Explain melting freezing Lesson 3: Mixtures Competence: Differentiate mixtures Lesson 4: Pure Substances Competence: Identify elements Lesson 5: Chemical Reactions Competence: Understand reactions",
+    "strategy": "semantic_percentile",
+    "page_numbers": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "char_range": [
+      0,
+      3430
+    ],
+    "position": 0,
+    "document_name": "large_fake_curriculum.pdf",
+    "extraction_version": "5.0.0",
+    "ingestion_timestamp": "2026-01-26T14:49:55.638828",
+    "source": "upload",
+    "file_type": "pdf",
+    "file_size": 5774,
+    "file_hash": "b74041485500763105aa58b27272c5aae77f6adafede60fee0e9e7e4b3753359"
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "doc_id": "9ba12d30-a943-439a-ad84-f99aacd57a1e",
+  "filename": "test_banking_doc.md",
+  "file_size": 1693,
+  "file_hash": "5568fd2d4614b57992ed65d2a8ae3425656abfa4400096599b002bc5a7b6732a",
+  "ingestion_timestamp": "2026-01-26T13:53:45.768974",
+  "processing_duration": 0.015004,
+  "extraction_version": "5.0.0",
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "# Banking Regulations Overview\n\nBanking regulations are critical for financial stability. The Basel III framework establishes comprehensive capital requirements for banks worldwide. These requirements ensure that institutions maintain adequate capital buffers to absorb losses during economic downturns. The framework also includes liquidity requirements and leverage ratios to strengthen the banking sector's resilience.\n\n## Anti-Money Laundering\n\nAnti-Money Laundering (AML) regulations require financial institutions to implement robust monitoring systems. These systems must detect suspicious transactions and report them to relevant authorities. The Financial Action Task Force (FATF) sets international standards for AML and Counter-Terrorist Financing (CTF) measures. Compliance with these standards is mandatory for banks operating in the global financial system.\n\n## Know Your Customer\n\nKnow Your Customer (KYC) procedures are essential components of banking compliance. Banks must verify the identity of their clients and assess their risk profiles. This process involves collecting personal information, proof of address, and understanding the nature of the customer's business activities. Effective KYC procedures help prevent fraud and ensure regulatory compliance.\n\n## Risk Management\n\nRisk management in banking involves identifying, assessing, and mitigating various types of risks. Credit risk, market risk, and operational risk are the primary categories. Banks use sophisticated models and stress testing to evaluate their risk exposure. The risk management framework must be aligned with the institution's strategic objectives and regulatory requirements.",
+      "metadata": {
+        "has_images": false,
+        "image_count": 0,
+        "image_ids": [],
+        "has_tables": false,
+        "ocr_processed": false
+      }
+    }
+  ],
+  "metadata": {
+    "source": "upload",
+    "file_type": "md",
+    "created_at": "2026-01-26T13:53:45.759971",
+    "original_filename": "test_banking_doc.md",
+    "file_size": 1693
+  },
+  "processing_stats": {
+    "page_count": 1,
+    "total_text_length": "# Banking Regulations Overview\n\nBanking regulations are critical for financial stability. The Basel III framework establishes comprehensive capital requirements for banks worldwide. These requirements ensure that institutions maintain adequate capital buffers to absorb losses during economic downturns. The framework also includes liquidity requirements and leverage ratios to strengthen the banking sector's resilience.\n\n## Anti-Money Laundering\n\nAnti-Money Laundering (AML) regulations require financial institutions to implement robust monitoring systems. These systems must detect suspicious transactions and report them to relevant authorities. The Financial Action Task Force (FATF) sets international standards for AML and Counter-Terrorist Financing (CTF) measures. Compliance with these standards is mandatory for banks operating in the global financial system.\n\n## Know Your Customer\n\nKnow Your Customer (KYC) procedures are essential components of banking compliance. Banks must verify the identity of their clients and assess their risk profiles. This process involves collecting personal information, proof of address, and understanding the nature of the customer's business activities. Effective KYC procedures help prevent fraud and ensure regulatory compliance.\n\n## Risk Management\n\nRisk management in banking involves identifying, assessing, and mitigating various types of risks. Credit risk, market risk, and operational risk are the primary categories. Banks use sophisticated models and stress testing to evaluate their risk exposure. The risk management framework must be aligned with the institution's strategic objectives and regulatory requirements.",
+    "tables_count": 0,
+    "images_count": 0
+  },
+  "warnings": [],
+  "errors": []
+}

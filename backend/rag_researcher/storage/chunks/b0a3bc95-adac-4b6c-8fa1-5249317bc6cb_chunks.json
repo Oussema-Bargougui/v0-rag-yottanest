@@ -1,0 +1,585 @@
+{
+  "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+  "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+  "chunk_strategy": "semantic_percentile",
+  "chunk_count": 23,
+  "chunks": [
+    {
+      "chunk_id": "632a0d57-a542-4b59-8e4e-c8b6f1ce7a41",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "DRIVING A POSITIVE IMPACT IN A TANGIBLE WAY FOR THE REAL ECONOMY ENVIRONMENT Create a lasting positive environmental impact SOCIAL Promote diversity, equity and inclusion (“DEI”) and leverage capabilities for socially-impactful products & propositions GOVERNANCE Regulatory best practice through all operational processes AMBITION Fund green alternatives for sustainable homes and transport Minimise operational carbon footprint, supporting carbon reduction plans and net zero commitments Consider climate risk as part of investment and risk management process Financial Inclusion - loans and other financial products made available to a broader audience Enable SMEs to promote growth and job creation in Pollen Street’s markets Creating opportunities to reduce inequalities - promoting diversity, equity and inclusion Commitment to transparent reporting and communications Effective AML & cyber procedures and governance Engagement with portfolio companies on governance, to identify gaps and provide support Responsible lending - best practice amongst our credit partners RECENT HIGHLIGHTS Fifth year of carbon measurement Introduced Private Markets decarbonisation roadmap to map portfolio activities Maintained carbon neutral status Strengthened community & charity efforts with Future First and Human Rights Watch DEI initiatives across firm and portfolio - with a focus on social mobility - 10,000 Interns, GAIN & EY Foundation ESG margin ratchet now in place for 16 credit facilities driving uplift in ESG scores Built Policy library and guidance to share with portfolio companies Delivered TCFD disclosures, using third parties to support climate risk framework and roadmap SHORT-TERM FOCUS Strengthen carbon measurement activities for carbon footprint, including Scope 3 emissions Tracking climate commitments and plans for firm and portfolio Continued investment in sustainable finance propositions Broaden DEI targets and measures Engage with collaboration initiatives to deliver impactful change Enhance oversight and regulatory governance frameworks Continue to deliver ESG training and education across the Board, firm and portfolio Strengthening supply chain sustainability procedures SUSTAINABLE DEVELOPMENT GOALS (“SDG”) ALIGNMENT",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        26
+      ],
+      "char_range": [
+        59110,
+        61359
+      ],
+      "position": 0,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 2247,
+      "chunk_index": 0,
+      "total_chunks": 23,
+      "section_hint": null
+    },
+    {
+      "chunk_id": "6676a788-adc2-44a6-98ba-126df538fb46",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "The roles and responsibilities of the Audit Committee include to:\n•\t monitor the financial reporting process and the integrity of the financial and narrative statements and other financial information provided to shareholders; •\t review and monitor the integrity of the Annual Report and Accounts and the Interim Report and review and challenge where necessary the accounting policies of the Group; •\t review the adequacy and effectiveness of the Group’s internal financial and internal control and risk management systems, in collaboration with the Risk Committee in relation to non-financial controls; •\t make recommendations to the Board on the reappointment or removal of the external auditors and to approve their remuneration and terms of engagement; •\t review and monitor the external auditors’ independence and objectivity; •\t review the performance of the internal audit function and auditor; •\t monitor the processes for compliance with laws, regulations and ethical codes of practice; and •\t ensure the Company follows the Audit Committee and the External Audit: Minimum Standard.",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        82
+      ],
+      "char_range": [
+        220796,
+        221888
+      ],
+      "position": 1,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 1091,
+      "chunk_index": 1,
+      "total_chunks": 23,
+      "section_hint": "The roles and responsibilities of the Audit Committee include to:"
+    },
+    {
+      "chunk_id": "7f99bbb5-da71-498b-89b3-4a689c69b71d",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "The review concluded that management judgements were satisfactory. SIGNIFICANT MATTERS CONSIDERED DURING THE YEAR The Audit Committee met five times during the year under review and considered the following items:\n•\t the Company’s Annual Report and Accounts for the year ended 31 December 2023; •\t the Group’s Interim Report for the six months ended 30 June 2024; •\t the Audit Committees compliance with the Audit Committees and the External Audit: Minimum Standard as published by the Financial Reporting Council (“FRC”); •\t the appropriateness of the Group’s accounting policies and whether appropriate estimates and judgements have been made and disclosed in preparation of the above documents; •\t the independence, effectiveness and reappointment of the external auditor; •\t the audit tender process and appointment of the external auditor; •\t the audit plan for the Group’s audits shared by the external auditors; •\t the Group’s non-audit services policy and the updated policy on non-audit services provided by the external auditor; •\t the Company’s appointment of Crispin Goldsmith as CFO; •\t approval of the Internal Audit Charter and regular updates on Internal Audit; •\t the Group’s approach to the going concern assessment and viability statement as to the longer-term viability of the Group; •\t the Group’s critical accounting estimates and judgements, including goodwill impairment assessment; •\t the ongoing impact and risks associated with recent geopolitical and macroeconomic events, including the impact of and significant increases in inflation and interest rates; and •\t the Group’s ESG and climate-related risks and disclosures, including the process by which management gather ESG data and metrics and the supporting documents, the relevance of material climate-related matters, including the risks of climate change and transition risks associated with the goals of the Paris Agreement.",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        83
+      ],
+      "char_range": [
+        223367,
+        225277
+      ],
+      "position": 2,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 1909,
+      "chunk_index": 2,
+      "total_chunks": 23,
+      "section_hint": null
+    },
+    {
+      "chunk_id": "75955906-31c7-44a5-8784-18861cd6791b",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "Full details of the number of Committee meetings and attendance by individual Committee members can be found on page 73. THE ROLE OF THE RISK COMMITTEE The responsibilities of the Risk Committee include to:\n•\t oversee the Group’s risk management and compliance activities; •\t set and monitor the Group’s risk appetite; •\t review the Group’s internal control and risk management systems and ensure they remain effective and align with strategic objectives, in collaboration with the Audit Committee in respect of financial controls; •\t carry out a robust assessment of the Group’s emerging and principal risks; •\t oversee the processes for compliance with laws, regulations and ethical codes of practice and prevention of fraud; •\t review the Group’s key risk policies, including the risk management, market abuse, related party transactions and significant transaction policies; •\t review and approve risk statements to be included in the Annual Report and Accounts concerning internal controls and risk management; and •\t oversee the Group’s internal capital and risk assessment (“ICARA”).",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        88
+      ],
+      "char_range": [
+        241199,
+        242290
+      ],
+      "position": 3,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 1090,
+      "chunk_index": 3,
+      "total_chunks": 23,
+      "section_hint": null
+    },
+    {
+      "chunk_id": "05197532-ac1f-42a9-81f8-1e8206bd069b",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "The responsibilities of the Nomination Committee includes:\n•\t reviewing the structure, size and composition of the Board, taking into account the balance of skills, knowledge, experience and the provisions of the Company’s Board Diversity Policy, and to make recommendations to the Board with regard to any changes; •\t considering proposals for the re-appointment of directors and also any proposal for their dismissal, retirement, non-reappointment or any substantial change in their duties or responsibilities or the term of their appointment; •\t ensuring plans are in place for orderly succession for both the Board and senior management positions, and to oversee the development of a diverse pipeline for succession, taking into account the challenges and opportunities facing the Company, and the skills and expertise needed on the Board in future; •\t keeping under review the leadership needs of the organisation, both executive and non-executive, with a view to ensuring the continued ability of the organisation to compete effectively in the marketplace; •\t keeping up to date and fully informed about strategic issues and commercial changes affecting the Company and the market in which it operates; •\t identifying and nominating for the approval of the Board candidates to fill Board vacancies as they arise; •\t evaluating the balance of skills, knowledge, experience and diversity on the Board before any appointment is made by the Board, and, in light of this evaluation, prepare a description of the role and capabilities required for a particular appointment and the time commitment expected; •\t setting measurable objectives for diversity, equal opportunity and inclusion in relation to the board and senior management positions; •\t keeping under review the number of external appointments held by each director and ensure that any new additional external appointments are approved in advance by the Board before being accepted; •\t considering the membership of any other Board Committees as appropriate, in consultation with the chairs of those Committees; and REPORT OF THE NOMINATION COMMITTEE As Chair of the Nomination Committee, I am pleased to present the Committee’s report for the year ended 31 December 2024.",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        90
+      ],
+      "char_range": [
+        246003,
+        248237
+      ],
+      "position": 4,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 2233,
+      "chunk_index": 4,
+      "total_chunks": 23,
+      "section_hint": "The responsibilities of the Nomination Committee includes:"
+    },
+    {
+      "chunk_id": "4215c220-0ded-4beb-b3ec-f8c2222cee46",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "No Director has any connection to Lomond Consulting; •\t preparing a job specification for the appointment of a chair, and provide consideration of certain candidates for the Board Chair and SID roles and whether they would bring appropriate skills, knowledge, experience and diversity to support the long-term success of the business; •\t review of the structure, size and composition of the Board; •\t review of the diversity of the Board and its Equal Opportunity and Inclusion Policy, and ensuring that the Company has an adequate plan in place to comply with the Board diversity targets set out in Listing Rules; •\t Review of Directors’ biographies and the reasons for their reappointment; •\t Discussion of succession planning for the Chair and other Directors and senior management; •\t Review of the results of the annual evaluation of the Board and Committee’s performance; and •\t Review of the induction process for new directors.",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        91
+      ],
+      "char_range": [
+        249671,
+        250607
+      ],
+      "position": 5,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 935,
+      "chunk_index": 5,
+      "total_chunks": 23,
+      "section_hint": null
+    },
+    {
+      "chunk_id": "3786aab8-034a-4c83-b28b-41a2e3bb83de",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "Our additional responsibilities with respect to the corporate governance statement as other information are described in the Reporting on other information section of this report. Based on the work undertaken as part of our audit, we have concluded that each of the following elements of the corporate governance statement is materially consistent with the financial statements and our knowledge obtained during the audit, and we have nothing material to add or draw attention to in relation to:\n•  The directors’ confirmation that they have carried out a robust assessment of the emerging and principal risks; •  The disclosures in the Annual Report that describe those principal risks, what procedures are in place to identify emerging risks and an explanation of how these are being managed or mitigated; •  The directors’ statement in the financial statements about whether they considered it appropriate to adopt the going concern basis of accounting in preparing them, and their identification of any material uncertainties to the Group’s and Company’s ability to continue to do so over a period of at least twelve months from the date of approval of the financial statements; •  The directors’ explanation as to their assessment of the Group’s and Company’s prospects, the period this assessment covers and why the period is appropriate; and •  The directors’ statement as to whether they have a reasonable expectation that the Company will be able to continue in operation and meet its liabilities as they fall due over the period of its assessment, including any related disclosures drawing attention to any necessary qualifications or assumptions.",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        117
+      ],
+      "char_range": [
+        319068,
+        320726
+      ],
+      "position": 6,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 1657,
+      "chunk_index": 6,
+      "total_chunks": 23,
+      "section_hint": null
+    },
+    {
+      "chunk_id": "05f61bad-4fbe-4eb2-af0a-9a4b409c0052",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "Audit procedures performed by the engagement team included:\n•  Discussions with management and the Audit Committee, including consideration of known or suspected instances of non-compliance with laws and regulation and fraud; •  Reviewing Board meeting and other relevant Committee minutes to identify any significant or unusual transactions or other matters that could require further investigation; •  Challenging assumptions and judgements made by management in determining significant accounting estimates, in particular in relation to the valuation of equity assets and carried interest assets at fair value, allowance for expected credit losses on amortised cost assets and accounting for goodwill; •  Identifying and testing journal entries meeting specific fraud criteria, including those posted with certain account combinations and posted by unexpected users; •  Obtaining confirmations from third parties to confirm the existence of a sample of balances; and •  Incorporating unpredictability in the selection of the nature, timing and extent of audit procedures performed.",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        118
+      ],
+      "char_range": [
+        325240,
+        326325
+      ],
+      "position": 7,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 1084,
+      "chunk_index": 7,
+      "total_chunks": 23,
+      "section_hint": "Audit procedures performed by the engagement team included:"
+    },
+    {
+      "chunk_id": "25b698e7-6309-4461-b16c-78fbfa6a1211",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "As at 31 December 2024 As at 31 December 2023 Unaudited9 Notes £’000 £’000 Non-current assets Credit Assets at amortised cost 9 309,423 444,490 Investment Assets held at fair value through profit or loss 10 194,176 88,220 Fixed assets 11 1,149 1,277 Lease assets 12 4,860 3,817 Goodwill and intangible assets 13 227,100 227,740 Carried interest 14 25,073 17,332 Deferred tax asset 7 3,256 - Total non-current assets 765,037 782,876 Current assets Trade and other receivables 15 35,542 17,942 Current tax receivable 561 - Cash and cash equivalents 11,195 19,746 Total current assets 47,298 37,688 Total assets 812,335 820,564 Current liabilities Interest-bearing borrowings 17 498 132,738 Trade and other payables 18 29,249 19,149 Lease liabilities 12 1,376 1,402 Current tax payable - 981 Derivative financial liabilities 16 1,467 179 Total current liabilities 32,590 154,449 Total assets less current liabilities 779,745 666,115 Non-current liabilities Interest-bearing borrowings 17 187,767 78,026 Lease liabilities 12 3,756 2,750 Deferred tax liability 7 8,866 3,093 Total non-current liabilities 200,389 83,869 Net assets 579,356 582,246 Shareholders’ funds Ordinary share capital 21 610 642 Share premium 21 549,757 - Retained earnings 29,196 4,978 Other reserves 21 (207) 576,626 Total shareholders’ funds 579,356 582,246 Net asset value per share (pence) 23 950.",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        123
+      ],
+      "char_range": [
+        332329,
+        333698
+      ],
+      "position": 8,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 1369,
+      "chunk_index": 8,
+      "total_chunks": 23,
+      "section_hint": null
+    },
+    {
+      "chunk_id": "ee9d4849-13e3-4a56-a121-263d651580e2",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "For the year ended 31 December 2023 For the year ended 31 December 2024 Ordinary Share Capital Share Premium Retained Earnings Special Distributable Reserve Merger Reserves Foreign Currency Translation Reserve Total Equity £’000 £’000 £’000 £’000 £’000 £’000 £’000 Shareholders’ funds as at 1 January 2024 642 - 4,978 351,625 225,270 (269) 582,246 Reallocation of reserves - 576,895 - (351,625) (225,270) - - Profit after taxation - - 49,598 - - - 49,598 Reclassification of transaction costs - 517 (517) - - - - Transaction costs in relation to the Reorganisation - (4,833) - - - - (4,833) Dividends paid - - (24,863) - - - (24,863) Buybacks (32) (22,822) - - - - (22,854) Foreign currency translation reserve - - - - - 62 62 Shareholders’ funds as at 31 December 2024 610 549,757 29,196 - - (207) 579,356 Ordinary Share Capital Share Premium Retained Earnings Special Distributable Reserve Merger Reserves Foreign Currency Translation Reserve Total Equity Unaudited9 £’000 £’000 £’000 £’000 £’000 £’000 £’000 Shareholders’ funds as at 1 January 2023 689 299,599 2 51,979 225,270 - 577,539 Profit after taxation - - 39,940 - - - 39,940 Dividends paid - - (31,664) - - - (31,664) Cancellation of treasury shares (47) 47 - - - - - Cancellation of share premium reserve - (299,646) - 299,646 - - - Reallocation of reserves - - (184) - - 184 - Transfer from goodwill - - (2,651) - - - (2,651) Deferred tax adjustment - - (465) - - - (465) Foreign currency translation reserve - - - - - (453) (453) Shareholders’ funds as at 31 December 2023 642 - 4,978 351,625 225,270 (269) 582,246 The notes to the accounts form an integral part of the financial statements.",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        125
+      ],
+      "char_range": [
+        335100,
+        336757
+      ],
+      "position": 9,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 1656,
+      "chunk_index": 9,
+      "total_chunks": 23,
+      "section_hint": null
+    },
+    {
+      "chunk_id": "14606112-3b1f-4487-928e-99b496352ba2",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "Annual Report and Accounts 2024 For the year ended 31 December 2023 For the year ended 31 December 2024 Ordinary Share Capital Share Premium Retained Earnings Total Equity £’000 £’000 £’000 £’000 Shareholders’ funds as at 1 January 2024 - - - - Issue of share capital 642 570,627 - 571,269 Transaction costs in relation to the Reorganisation - (4,833) - (4,833) Profit after taxation - - 39,022 39,022 Dividends paid - - (16,516) (16,516) Buybacks (32) (22,822) - (22,854) Shareholders’ funds as at 31 December 2024 610 542,972 22,506 566,088 Ordinary Share Capital Share Premium Retained Earnings Total Equity £’000 £’000 £’000 £’000 Shareholders’ funds as at 1 January 2023 - - - - Profit after taxation - - - - Dividends paid - - - - Shareholders’ funds as at 31 December 2023 - - - - The notes to the accounts form an integral part of the financial statements.",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        126
+      ],
+      "char_range": [
+        336854,
+        337719
+      ],
+      "position": 10,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 864,
+      "chunk_index": 10,
+      "total_chunks": 23,
+      "section_hint": null
+    },
+    {
+      "chunk_id": "0698d573-1879-462d-a18b-28cab786e376",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "CONSOLIDATED STATEMENT OF CASH FLOWS For the year ended 31 December 2024 For the year ended 31 December 2023 Unaudited9 Notes £’000 £’000 Cash flows from operating activities:\nCash generated from operations 24 35,077 37,225 Net repayments of Credit Assets at amortised cost 141,662 82,741 Dividends received from Investment Assets - 1,507 Purchase of investments at fair value 10 (94,984) (44,227) Proceeds from disposal of investments at fair value 10 6,483 25,682 Tax paid (3,669) (105) Net cash inflow from operating activities 84,569 102,823 Cash flows from investing activities:\nPurchase of fixed assets 11 (156) (137) Net cash inflow from investing activities (156) (137) Cash flows from financing activities:\nPayment of lease liabilities 12 (1,564) (1,350) Reorganisation transaction costs (4,833) - Drawdown of interest-bearing borrowings 17 240,500 37,000 Repayments of interest-bearing borrowings 17 (260,519) (91,094) Transaction costs for financing activities 17 (2,880) - Interest paid on financing activities 17 (15,951) (19,135) Share buybacks (22,854) - Dividends paid in the year 22 (24,863) (31,664) Net cash outflow from financing activities (92,964) (106,243) Net change in cash and cash equivalents (8,551) (3,557) Cash and cash equivalents at the beginning of the year 19,746 23,303 Cash and cash equivalents at the end of the year 11,195 19,746 Interest received for the Group for the year ended 31 December 2024 was £33.",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        127
+      ],
+      "char_range": [
+        337790,
+        339234
+      ],
+      "position": 11,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 1444,
+      "chunk_index": 11,
+      "total_chunks": 23,
+      "section_hint": null
+    },
+    {
+      "chunk_id": "efb819d0-9a7c-46fc-87d7-ac29fc72026c",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "Annual Report and Accounts 2024 COMPANY STATEMENT OF CASH FLOWS For the year ended 31 December 2024 For the year ended 31 December 2023 Notes £’000 £’000 Cash flows from operating activities:\nCash generated from operations 24 44,203 - Net cash inflow from operating activities 44,203 - Cash flows from financing activities:\nReorganisation transaction costs (4,833) Share buybacks (22,854) - Dividends paid in the year 22 (16,516) - Net cash outflow from financing activities (44,203) - Net change in cash and cash equivalents - - Cash and cash equivalents at the beginning of the year - - Cash and cash equivalents at the end of the year - - The notes to the accounts form an integral part of the financial statements. POLLEN STREET 128 NOTES TO THE FINANCIAL STATEMENTS Pollen Street Group Limited is a public company limited by shares, incorporated and registered under the laws of Guernsey with registration number 70165.",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        128,
+        129
+      ],
+      "char_range": [
+        339384,
+        340310
+      ],
+      "position": 12,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 924,
+      "chunk_index": 12,
+      "total_chunks": 23,
+      "section_hint": null
+    },
+    {
+      "chunk_id": "9b5182f6-f315-428f-9638-2fad06157a39",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "The Group offsets deferred tax assets and deferred tax liabilities if and only if it has a legally enforceable right to set off current tax assets and current tax liabilities and the deferred tax assets and deferred tax liabilities relate to income taxes levied by the same taxation authority on either the same taxable entity or different taxable entities which intend either to settle current tax liabilities and assets on a net basis, or to realise the assets and settle the liabilities simultaneously, in each future period in which significant amounts of deferred tax liabilities or assets are expected to be settled or recovered. Sales tax Expenses and assets are recognised net of the amount of sales tax, except:\n•\t when the sales tax incurred on a purchase of assets or services is not recoverable from the taxation authority, in which case, the sales tax is recognised as part of the cost of acquisition of the asset or as part of the expense item, as applicable; and •\t when receivables and payables are stated with the amount of sales tax included.",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        145
+      ],
+      "char_range": [
+        413790,
+        414851
+      ],
+      "position": 13,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 1060,
+      "chunk_index": 13,
+      "total_chunks": 23,
+      "section_hint": null
+    },
+    {
+      "chunk_id": "b8afdf0d-dad2-4c31-baac-9e292ce7fad5",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "The following tables show the consolidated operating segments profit and loss movements for their respective years:\nFor the year ended 31 December 2024 Group Asset Manager £’000 Investment Company £’000 Central £’000 Total £’000 Management fee income 49,600 - (5,193) 44,407 Catch-up management fee income 5,875 - - 5,875 Carried interest and performance fee income 11,320 - (3,534) 7,786 Interest income on Credit Assets held at amortised cost - 41,380 - 41,380 Gains on Investment Assets held at fair value11 - 18,998 - 18,998 Total income 66,795 60,378 (8,727) 118,446 Expected credit loss charge - (593) - (593) Third-party servicing costs - (1,177) - (1,177) Net operating income 66,795 58,608 (8,727) 116,676 Administration costs (39,386) (10,467) 7,922 (41,931) Finance costs (235) (16,352) - (16,587) Operating profit 27,174 31,789 (805) 58,158 Depreciation (1,730) - - (1,730) Amortisation - - (640) (640) Profit before tax 25,444 31,789 (1,445) 55,788 11 The ‘Gains on Investment Assets held at fair value’ includes £0.",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        154
+      ],
+      "char_range": [
+        446373,
+        447402
+      ],
+      "position": 14,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 1029,
+      "chunk_index": 14,
+      "total_chunks": 23,
+      "section_hint": "The following tables show the consolidated operating segments profit and loss movements for their respective years:"
+    },
+    {
+      "chunk_id": "699753be-80cf-4916-a1b3-5fab334d06b3",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "For the year ended 31 December 2023 Group Asset Manager £’000 Investment Company £’000 Central £’000 Total £’000 Management fee income 34,332 - (5,420) 28,912 Carried interest and performance fee income 14,831 - (3,351) 11,480 Interest income on Credit Assets held at amortised cost - 57,668 - 57,668 Gains on Investment Assets held at fair value - 5,102 - 5,102 Total income 49,163 62,770 (8,771) 103,162 Expected credit loss release - 970 - 970 Third-party servicing costs - (2,374) - (2,374) Net operating income 49,163 61,366 (8,771) 101,758 Administration costs (33,026) (10,833) 7,168 (36,691) Finance costs (230) (20,360) - (20,590) Operating profit 15,907 30,173 (1,603) 44,477 Depreciation (1,233) - - (1,233) Amortisation - - (640) (640) Profit before tax 14,674 30,173 (2,243) 42,604 Asset Manager EBITDA For the year ended 31 December 2024 £’000 For the year ended 31 December 2023 £’000 Operating profit of the Asset Manager 27,174 15,907 Depreciation of lease asset12 (1,451) (959) Fund Management EBITDA 25,723 14,948 Fund Management EBITDA Margin 39% 30% Investment Company Returns For the year ended 31 December 2024 £’000 For the year ended 31 December 2023 £’000 Income on Net Investment Assets 31,789 30,173 Average Net Investment Assets 330,125 344,275 Return on Net Investment Assets 9. 6% 8. 8% 12 Fund Management EBITDA is calculated by deducting the charge for the lease asset depreciation from the statutory operating profit of the Asset Manager as this charge is reported as depreciation of a right-of-use asset and financing costs under IFRS 16.",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        155
+      ],
+      "char_range": [
+        447570,
+        449142
+      ],
+      "position": 15,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 1573,
+      "chunk_index": 15,
+      "total_chunks": 23,
+      "section_hint": null
+    },
+    {
+      "chunk_id": "5d460f31-8067-444e-92a1-7de79fa4b29e",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "The following table analyses ECL by staging for the Group:\nFor the year ended 31 December 2024 Group Stage 1 £’000 Stage 2 £’000 Stage 3 £’000 Total £’000 As at 1 January 2024 693 576 7,042 8,311 Movement from stage 1 to stage 2 (2) 90 - 88 Movement from stage 1 to stage 3 (1) - 280 279 Movement from stage 2 to stage 1 - (75) - (75) Movement from stage 2 to stage 3 - (101) 173 72 Movement from stage 3 to stage 1 - - (104) (104) Movement from stage 3 to stage 2 - 15 (66) (51) Movements within stage (12) (3) 752 737 Decreases due to repayments (241) (38) (234) (513) Remeasurements due to modelling 159 (96) 97 160 Allowance for ECL as at 31 December 2024 596 368 7,940 8,904 For the year ended 31 December 2023 Group Stage 1 £’000 Stage 2 £’000 Stage 3 £’000 Total £’000 As at 1 January 2023 1,013 678 7,590 9,281 Movement from stage 1 to stage 2 (75) 235 - 160 Movement from stage 1 to stage 3 (202) - 468 266 Movement from stage 2 to stage 1 2 (150) - (148) Movement from stage 2 to stage 3 - (156) 335 179 Movement from stage 3 to stage 1 - - (124) (124) Movement from stage 3 to stage 2 - 60 (150) (90) Decreases due to repayments - (24) (274) (298) Remeasurements due to modelling (45) (67) (803) (915) Allowance for ECL as at 31 December 2023 693 576 7,042 8,311 161 Financial Statements POLLEN STREET",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        161
+      ],
+      "char_range": [
+        458328,
+        459642
+      ],
+      "position": 16,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 1312,
+      "chunk_index": 16,
+      "total_chunks": 23,
+      "section_hint": "The following table analyses ECL by staging for the Group:"
+    },
+    {
+      "chunk_id": "02db85ef-efca-4781-9a43-4457538364fc",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "10. Investment Assets at Fair Value Through Profit or Loss a) Investment Assets at fair value through profit or loss The following table shows the total Investment Assets at fair value through profit or loss of the Group, which includes both Equity Assets and Credit Assets for the year ended 31 December 2024. For the year ended 31 December 2024 Group Equity Assets £’000 Credit Assets £’000 Total £’000 Opening balance 26,839 61,381 88,220 Additions at cost 45,172 49,812 94,984 Realisations (168) (8,021) (8,189) Unrealised gains through profit or loss 11,541 1,330 12,871 Realised gains through profit or loss - 5,813 5,813 Foreign exchange revaluation - 477 477 Closing balance 83,384 110,792 194,176 Comprising:\nValued using net asset value 43,916 85,115 129,031 Valued using an earnings multiple 15,385 - 15,385 Valued using a discounted cash flow 1,360 25,677 27,037 Valued using a liquidity discount 22,723 - 22,723 Closing balance 83,384 110,792 194,176 163 Financial Statements POLLEN STREET",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        163
+      ],
+      "char_range": [
+        463934,
+        464938
+      ],
+      "position": 17,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 1002,
+      "chunk_index": 17,
+      "total_chunks": 23,
+      "section_hint": null
+    },
+    {
+      "chunk_id": "268d621b-17df-4fa1-a422-bd5b2de084b6",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "d) Financial assets and liabilities not carried at fair value but for which fair value is disclosed For the Group as at 31 December 2024:\nGroup Carrying Value Fair Value £’000 Level 1 £’000 Level 2 £’000 Level 3 £’000 Total £’000 Assets Credit Assets at amortised cost 309,423 - - 317,629 317,629 Carried interest receivable 1,365 - - 1,365 1,365 Trade and other receivables 35,542 - 35,542 - 35,542 Cash and cash equivalents 11,195 11,195 - - 11,195 Total assets 357,525 11,195 35,542 318,994 365,731 Liabilities Trade and other payables (29,249) - (29,249) - (29,249) Interest-bearing liabilities (188,265) - (188,265) - (188,265) Total liabilities (217,514) - (217,514) - (217,514) For the Group as at 31 December 2023:\nGroup Carrying Value Fair Value £’000 Level 1 £’000 Level 2 £’000 Level 3 £’000 Total £’000 Assets Credit Assets at amortised cost 444,490 - - 454,254 454,254 Carried interest receivable 1,365 - - 1,365 1,365 Trade and other receivables 17,942 - 17,942 - 17,942 Cash and cash equivalents 19,746 19,746 - - 19,746 Total assets 483,543 19,746 17,942 455,619 493,307 Liabilities Trade and other payables (19,149) - (19,149) - (19,149) Interest-bearing liabilities (210,764) - (210,764) - (210,764) Total liabilities (229,913) - (229,913) - (229,913) Note 9 provides further details of the loans at amortised cost held by the Group. The fair value of the receivable and payable balances approximates their carrying amounts due to the short‑term nature of the balances.",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        165
+      ],
+      "char_range": [
+        466913,
+        468401
+      ],
+      "position": 18,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 1487,
+      "chunk_index": 18,
+      "total_chunks": 23,
+      "section_hint": null
+    },
+    {
+      "chunk_id": "b293f7e7-7515-4614-97ae-98f625b4767b",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "The Group utilises its treasury system data such as live cash balance, debt balances and upcoming payment obligations in order to monitor liquidity on an ongoing basis. POLLEN STREET 178 The tables below show the cash flows of the Group’s financial assets and liabilities on an undiscounted basis by contractual maturity:\nAs at 31 December 2024 Group <3 months £’000 3-12 months £’000 1-5 years £’000 5+ years £’000 Total £’000 Credit Assets at amortised cost 683 18,642 238,328 51,770 309,423 Investment Assets at fair value through profit or loss 41,894 11,833 65,009 75,440 194,176 Trade and other receivables 25,939 4,810 4,793 - 35,542 Cash and cash equivalents 11,195 - - - 11,195 Total assets 79,711 35,285 308,130 127,210 550,336 Liabilities Trade and other payables (19,561) (7,697) (1,991) - (29,249) Lease liabilities (391) (1,173) (3,966) - (5,530) Interest-bearing borrowings (498) - (187,767) - (188,265) Total liabilities (20,450) (8,870) (193,724) - (223,044) As at 31 December 2023 Group <3 months £’000 3-12 months £’000 1-5 years £’000 5+ years £’000 Total £’000 Credit Assets at amortised cost 72,218 103,751 239,781 24,729 440,479 Investment Assets at fair value through profit or loss - 13,137 62,751 12,332 88,220 Trade and other receivables 5,569 9,922 2,451 - 17,942 Cash and cash equivalents 19,746 - - - 19,746 Total assets 97,533 126,810 304,983 37,061 566,387 Liabilities Trade and other payables (14,042) (3,314) (1,793) - (19,149) Lease liabilities (391) (1,173) (5,530) - (7,094) Interest-bearing borrowings (2,052) (130,686) (74,912) (3,114) (210,764) Total liabilities (16,485) (135,173) (82,235) (3,114) (237,007) Financial Statements POLLEN STREET 179",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        178,
+        179
+      ],
+      "char_range": [
+        494832,
+        496522
+      ],
+      "position": 19,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 1687,
+      "chunk_index": 19,
+      "total_chunks": 23,
+      "section_hint": null
+    },
+    {
+      "chunk_id": "169c18bc-71f3-4be1-8d54-10006da0ce12",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "Cash Generated from Operations Group Notes For the year ended 31 December 2024 £’000 For the year ended 31 December 2023 £’000 Profit before taxation 55,788 42,604 Adjustments for:\nCharge / (release) in expected credit loss 9 593 (970) Gains on Investment Assets held at fair value 10 (18,684) (5,659) Net interest from Credit Assets at amortised cost (7,855) (3,748) Finance costs 17 16,587 20,590 Foreign exchange revaluation 226 3 Gains in carried interest 14 (7,741) (10,280) Depreciation of fixed assets 11 284 274 Depreciation of lease assets 12 1,451 959 Amortisation of intangible assets 13 640 640 Increase in receivables 15 (17,600) (5,072) Increase / (decrease) in payables 18 10,100 (1,379) Increase / (decrease) in derivatives 16 1,288 (737) Cash generated from operations 35,077 37,225 Company Notes For the year ended 31 December 2024 £’000 For the year ended 31 December 2023 £’000 Profit before taxation 39,022 - Adjustments for:\nIncrease in receivables 15 (23,878) (100) Increase in payables 18 29,059 100 Cash generated from operations 44,203 - POLLEN STREET 184",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        184
+      ],
+      "char_range": [
+        503510,
+        504593
+      ],
+      "position": 20,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 1081,
+      "chunk_index": 20,
+      "total_chunks": 23,
+      "section_hint": null
+    },
+    {
+      "chunk_id": "4429f181-73b5-4d56-8b80-2dbdac99d158",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "The sensitivity parameters are considered reasonable assumptions in the movement in inputs:\nAs at 31 December 2024 As at 31 December 2023 Valuation Parameter - PSL Sensitivity applied Increase £’000 Decrease £’000 Increase £’000 Decrease £’000 Future income projections +/- 10% 37,631 (37,631) - - Discount rate +/- 100 bps (39,965) 50,516 - - Growth rate +/- 100 bps 39,911 (31,596) - - As at 31 December 2024 As at 31 December 2023 Valuation Parameter - PSCHL Sensitivity applied Increase £’000 Decrease £’000 Increase £’000 Decrease £’000 Future income projections +/- 10% 36,568 (36,568) - - Discount rate +/- 100 bps (39,611) 49,820 - - Growth rate +/- 100 bps 39,290 (31,288) - - Investments in consolidated entities The consolidated financial statements of the Group include the following subsidiaries:\nName Country on incorporation Class of shares Holding Activity Avant Credit of UK, LLC USA Ordinary 100% Lending company Bud Funding Limited UK Ordinary 100% SPV Financial Services Infrastructure Limited UK Ordinary 100% Dormant Honeycomb Finance Limited UK Ordinary 100% Lending company Juniper Lending Fund GP S. a.",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        187
+      ],
+      "char_range": [
+        510883,
+        512009
+      ],
+      "position": 21,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 1127,
+      "chunk_index": 21,
+      "total_chunks": 23,
+      "section_hint": "The sensitivity parameters are considered reasonable assumptions in the movement in inputs:"
+    },
+    {
+      "chunk_id": "3f5e6c1b-62ad-40b5-9196-e3b618932b4d",
+      "doc_id": "b0a3bc95-adac-4b6c-8fa1-5249317bc6cb",
+      "text": "Annual Report and Accounts 2024 Name Jurisdiction PSC Accelerator II (A) LP Guernsey PSC Accelerator II (B) SCSp Luxembourg PSC Accelerator II (C) LP Guernsey PSC Accelerator II Carry LP Guernsey PSC Accelerator LP Guernsey PSC Credit (OE) I SCSp Luxembourg PSC Credit (P) SCSp Luxembourg PSC Credit (T) Carry SCSp Luxembourg PSC Credit (T) SCSp Luxembourg PSC Credit III (A) SCSp Luxembourg PSC Credit III (B) SCSp Luxembourg PSC Credit III Carry SCSp Luxembourg PSC Credit IV (A) SCSp Luxembourg PSC Credit IV (B) SCSp Luxembourg PSC Credit IV Carry SCSp Luxembourg PSC Glebe LP Guernsey PSC III Carry LP UK PSC III G, LP Guernsey PSC III Pooling LP Canada PSC Investments (C), LP Guernsey PSC IV (B) LP Guernsey PSC IV (C), SCSp Luxembourg PSC IV Carry, LP Guernsey PSC Partners LP Guernsey PSC IV, LP Guernsey PSC Leto LP Guernsey PSC Marlin LP Guernsey PSC Neptune LP Guernsey PSC Plane (Guernsey) LP Incorporated Guernsey PSC Plane Carry LP Guernsey PSC Science SCSp Luxembourg PSC Tiger LP Guernsey POLLEN STREET 190",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        190
+      ],
+      "char_range": [
+        516384,
+        517409
+      ],
+      "position": 22,
+      "document_name": "Pollen-Street-Group-Limited-Annual-Financial-Report-2024-1.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T20:31:12.150901",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 4573455,
+      "file_hash": "82d6841da9d248fe28691018bd73c5bc7098d2e720b989d0dbf3467076b5843a",
+      "chunk_size": 1023,
+      "chunk_index": 22,
+      "total_chunks": 23,
+      "section_hint": null
+    }
+  ]
+}

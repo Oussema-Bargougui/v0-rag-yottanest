@@ -1,0 +1,33 @@
+# Yottanest VAT Validation API Dependencies
+# ==========================================
+
+# Web Framework
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+
+# SOAP Client for EU VIES Service
+zeep>=4.2.1
+
+# Data Validation
+pydantic>=2.5.0
+
+# HTTP Client (required by zeep)
+requests>=2.31.0
+
+# File Upload Support
+python-multipart>=0.0.6
+
+# RAG Pipeline Dependencies
+# =========================
+
+# PDF Processing
+pdfplumber>=0.10.0
+pdf2image>=1.16.0
+pytesseract>=0.3.10
+Pillow>=10.0.0
+
+# Text Processing & Embeddings
+sentence-transformers>=2.2.2
+numpy>=1.24.0
+
+# Note: Make sure to also install from ../rag_researcher/requirements.txt

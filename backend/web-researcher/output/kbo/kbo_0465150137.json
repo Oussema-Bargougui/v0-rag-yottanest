@@ -1,0 +1,200 @@
+{
+  "company_id": "0465.150.137",
+  "name": "Sabena Aerospace Engineering",
+  "status": "Active",
+  "legal_status": "Normal situation",
+  "legal_form": "Public limited company",
+  "start_date": "January 13, 1999",
+  "address_block": "Avenue Emmanuel Mounier 2 1200 Woluwe-Saint-Lambert",
+  "website": null,
+  "phone": null,
+  "fax": null,
+  "email": null,
+  "entity_type": "Legal person",
+  "establishment_units": "4",
+  "functions": [
+    {
+      "role": "Director",
+      "name": "[0552.883.667](https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=552883667)",
+      "since": "May 28, 2014"
+    },
+    {
+      "role": "Director",
+      "name": "Calandri , Sergio",
+      "since": "June 17, 2020"
+    },
+    {
+      "role": "Director",
+      "name": "Feys , Tom",
+      "since": "June 17, 2020"
+    },
+    {
+      "role": "Director",
+      "name": "ROCHET , MARC",
+      "since": "October 22, 2020"
+    },
+    {
+      "role": "Director",
+      "name": "Van Loo , Koenraad",
+      "since": "June 28, 2024"
+    },
+    {
+      "role": "Director",
+      "name": "van Ockenburg , Eric",
+      "since": "June 28, 2024"
+    },
+    {
+      "role": "Permanent representative",
+      "name": "Burton , Stéphane [(0552.883.667)](https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=552883667)",
+      "since": "May 28, 2014"
+    },
+    {
+      "role": "Permanent representative",
+      "name": "Henin , Olivier [(0758.517.630)](https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=758517630)",
+      "since": "November 27, 2020"
+    },
+    {
+      "role": "Managing Director",
+      "name": "[0552.883.667](https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=552883667)",
+      "since": "May 28, 2014"
+    }
+  ],
+  "entrepreneurial_skills": [
+    "No data included in CBE."
+  ],
+  "capacities": [
+    "There are 10 legal functions for this entity. [Show the legal functions](https://kbopub.economie.fgov.be/kbopub/zoeknummerform.html?lang=en&nummer=0465.150.137&actionLu=Search#null).There are 10 legal functions for this entity. [Hide the legal functions](https://kbopub.economie.fgov.be/kbopub/zoeknummerform.html?lang=en&nummer=0465.150.137&actionLu=Search#null).",
+    "Director [0552.883.667](https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=552883667) Since May 28, 2014",
+    "Director [0758.517.630](https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=758517630) Since November 27, 2020",
+    "Director Calandri , Sergio Since June 17, 2020",
+    "Director Feys , Tom Since June 17, 2020",
+    "Director ROCHET , MARC Since October 22, 2020",
+    "Director Van Loo , Koenraad Since June 28, 2024",
+    "Director van Ockenburg , Eric Since June 28, 2024",
+    "Permanent representative Burton , Stéphane [(0552.883.667)](https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=552883667) Since May 28, 2014",
+    "Permanent representative Henin , Olivier [(0758.517.630)](https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=758517630) Since November 27, 2020",
+    "Managing Director [0552.883.667](https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=552883667) Since May 28, 2014"
+  ],
+  "licenses": [
+    "No data included in CBE."
+  ],
+  "btw_activities": [
+    {
+      "version": "BTW 2008",
+      "code": "30.300",
+      "desc": "Manufacture of air and spacecraft and related machinery",
+      "since": "1 januari 2008"
+    },
+    {
+      "version": "BTW 2008",
+      "code": "52.230",
+      "desc": "Auxiliary services for air transportation",
+      "since": "1 januari 2008"
+    },
+    {
+      "version": "BTW 2003",
+      "code": "35.300",
+      "desc": "Construction aéronautique et spatiale",
+      "since": null
+    },
+    {
+      "version": "BTW 2003",
+      "code": "63.230",
+      "desc": "Services annexes des transports aériens",
+      "since": null
+    },
+    {
+      "version": "BTW 2008",
+      "code": "30.300",
+      "desc": "Manufacture of air and spacecraft and related machinery",
+      "since": null
+    },
+    {
+      "version": "BTW 2008",
+      "code": "52.230",
+      "desc": "Auxiliary services for air transportation",
+      "since": null
+    },
+    {
+      "version": "BTW 2003",
+      "code": "35.300",
+      "desc": "Construction aéronautique et spatiale",
+      "since": null
+    },
+    {
+      "version": "BTW 2003",
+      "code": "63.230",
+      "desc": "Services annexes des transports aériens",
+      "since": null
+    }
+  ],
+  "rsz_activities": [
+    {
+      "version": "RSZ 2008",
+      "code": "33.160",
+      "desc": "Repair and maintenance of aircraft and spacecraft",
+      "since": null
+    },
+    {
+      "version": "RSZ 2003",
+      "code": "35.300",
+      "desc": "Construction aéronautique et spatiale",
+      "since": null
+    },
+    {
+      "version": "RSZ 2008",
+      "code": "33.160",
+      "desc": "Repair and maintenance of aircraft and spacecraft",
+      "since": null
+    },
+    {
+      "version": "RSZ 2003",
+      "code": "35.300",
+      "desc": "Construction aéronautique et spatiale",
+      "since": null
+    }
+  ],
+  "financial_data": {
+    "capital": "10.146.307,34 EUR",
+    "annual_meeting": "May",
+    "fiscal_year_end": "31 December"
+  },
+  "entity_links": [
+    {
+      "number": "0464.101.052",
+      "name": "NORDIC AERO BELGIUM",
+      "relationship": "has been absorbed by this entity",
+      "since": "August 1, 2003  "
+    }
+  ],
+  "external_links": [
+    {
+      "label": "Publications in National Gazette",
+      "url": "https://www.ejustice.just.fgov.be/cgi_tsv/list.pl?language=fr&btw=0465150137&page=1&view_numac=0465150137#SUM"
+    },
+    {
+      "label": "Publication of the annual accounts in the Central Balance Sheet Office",
+      "url": "https://consult.cbso.nbb.be/consult-enterprise/0465150137"
+    },
+    {
+      "label": "Database of statutes and powers of representation (notarial deeds)",
+      "url": "https://statuts.notaire.be/stapor_v1/enterprise/0465150137/statutes"
+    },
+    {
+      "label": "Employers' repertory",
+      "url": "https://employer-identification-consult.socialsecurity.be/employer/enterprise/0465150137"
+    },
+    {
+      "label": "Check withholding obligation",
+      "url": "https://www.checkobligationderetenue.be"
+    },
+    {
+      "label": "Central Register of Director Disqualifications - log in",
+      "url": "https://justban.just.fgov.be/en"
+    }
+  ],
+  "vat_number": "0465150137",
+  "vat_formatted": "0465.150.137",
+  "source_url": "https://kbopub.economie.fgov.be/kbopub/zoeknummerform.html?lang=en&nummer=0465.150.137&actionLu=Search",
+  "engine": "crawl4ai"
+}

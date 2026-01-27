@@ -1,0 +1,33 @@
+{
+  "doc_id": "c2765dc7-193d-4a84-aeae-303d2c608175",
+  "document_name": "fake_curriculum.pdf",
+  "chunk_strategy": "semantic_percentile",
+  "chunk_count": 1,
+  "chunks": [
+    {
+      "chunk_id": "e4e640cc-1a1e-4228-937c-490b8ff9ba45",
+      "doc_id": "c2765dc7-193d-4a84-aeae-303d2c608175",
+      "text": "Grade 8 - Integrated Curriculum Chapter 1: Biology - Photosynthesis Lesson 1: Introduction to Photosynthesis Competence: Understand the role of sunlight in plant nutrition Lesson 2: The Chlorophyll Process Competence: Explain how chlorophyll captures light energy Lesson 3: Gas Exchange in Plants Competence: Identify oxygen and carbon dioxide roles Chapter 2: History - The French Revolution Lesson 1: Social Classes Before the Revolution Competence: Describe the three estates and their roles Lesson 2: Economic Crisis Competence: Explain how debt and taxation led to unrest Lesson 3: Political System of the Monarchy Competence: Understand absolute monarchy Chapter 3: Mathematics - Fractions Lesson 1: Understanding Fractions Competence: Identify numerator and denominator Lesson 2: Adding Fractions Competence: Add fractions with same denominator Lesson 3: Multiplying Fractions Competence: Multiply simple fractions Chapter 4: Geography - Climate Zones Lesson 1: Tropical Climate Competence: Identify characteristics of tropical regions Lesson 2: Temperate Climate Competence: Explain seasonal changes Lesson 3: Polar Climate Competence: Describe life in cold regions\n\n",
+      "strategy": "semantic_percentile",
+      "page_numbers": [
+        1
+      ],
+      "char_range": [
+        0,
+        1175
+      ],
+      "position": 0,
+      "document_name": "fake_curriculum.pdf",
+      "extraction_version": "5.0.0",
+      "ingestion_timestamp": "2026-01-26T21:50:35.726602",
+      "source": "upload",
+      "file_type": "pdf",
+      "file_size": 2484,
+      "file_hash": "fdae5fdcfea104804d18fb9fa7c03e2479c1f6dd8db4dfe0b97b7f76eaacea5f",
+      "chunk_size": 1175,
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "section_hint": null
+    }
+  ]
+}
