@@ -1,9 +1,0 @@
-{
-  "doc_id": "8e095e54-f95e-42de-985b-8bbe36e15a96",
-  "document_name": "ai_teacher.pdf",
-  "chunk_strategy": "semantic_percentile",
-  "embedding_model": "openai/text-embedding-3-large",
-  "embedding_dim": 3072,
-  "total_embeddings": 0,
-  "embeddings": []
-}

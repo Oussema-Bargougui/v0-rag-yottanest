@@ -1,0 +1,83 @@
+# Core Python packages
+requests>=2.31.0
+networkx>=3.1
+python-dotenv>=1.0.0
+
+# FastAPI and web framework
+fastapi>=0.109.0
+uvicorn>=0.27.0
+python-multipart>=0.0.6
+
+# AI/ML packages
+groq>=0.4.0
+sentence-transformers>=2.2.2  # For text embeddings
+nomic>=2.0.3                  # For Nomic embeddings
+openai>=1.3.0                 # For OpenAI embeddings (optional)
+
+# PDF processing
+PyPDF2>=3.0.1
+PyMuPDF>=1.23.0
+reportlab>=4.0.0              # For PDF generation
+markdown>=3.4.0               # For markdown processing
+
+# Document processing
+python-docx>=1.1.0             # For DOCX processing
+
+# Professional table extraction (BANK-GRADE)
+camelot-py[cv]>=0.11.0       # For advanced table extraction (lattice + stream)
+tabula-py>=2.9.0               # Alternative table extraction method
+
+# OCR support (BANK-GRADE)
+pytesseract>=0.3.10             # OCR for scanned PDFs
+pdf2image>=1.16.0               # Convert PDF to images for OCR
+Pillow>=10.0.0                   # Image processing
+
+# FREE-First Extraction Dependencies
+opencv-python-headless>=4.8.0    # FREE table detection (OpenCV)
+torch>=2.1.0                     # FREE image classification (CLIP model)
+ftfy>=6.1.3                      # CLIP dependency
+regex>=2023.10.3                 # CLIP dependency
+
+# Data analysis and visualization (optional)
+matplotlib>=3.7.0
+seaborn>=0.12.0
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Sentence splitting for chunking
+sentence-splitter>=1.4
+
+# BM25 sparse retrieval
+rank-bm25>=0.2.2
+
+# Vector database support
+scipy>=1.11.0                 # For vector similarity calculations
+qdrant-client>=1.9.0           # Qdrant vector database client
+httpx>=0.26.0                  # Async HTTP client for API calls
+
+# File monitoring
+watchdog>=3.0.0               # For automated file system monitoring
+
+# Community detection
+python-louvain>=0.16
+
+# Development and testing
+logging>=0.4.9.6
+pathlib>=1.0.1
+collections-extended>=2.0.2
+
+# Standard library packages (included with Python)
+# json, os, sys, re, datetime, typing - no installation needed
+
+# Installation Notes for FREE-First Extraction:
+# 1. OpenCV: pip install opencv-python-headless
+# 2. Tesseract OCR: Install from https://github.com/tesseract-ocr/tesseract
+#    - Windows: https://github.com/UB-Mannheim/tesseract/wiki
+#    - Linux: sudo apt-get install tesseract-ocr
+#    - Mac: brew install tesseract
+# 3. Ghostscript: Required for pdf2image (camelot dependency)
+#    - Windows: https://www.ghostscript.com/download/gsdnld.html
+#    - Linux: sudo apt-get install ghostscript
+#    - Mac: brew install ghostscript
+# 4. CLIP model: Automatically downloaded on first use (~600MB)
+#    - Will be cached locally after first run

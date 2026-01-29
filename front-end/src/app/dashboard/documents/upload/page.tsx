@@ -2,19 +2,23 @@
 
 import * as React from "react"
 import { useRouter } from "next/navigation"
-import { UploadCloud, FileIcon, ImageIcon, ExternalLink, X, FileText, Loader2, Play, MessageSquare } from "lucide-react"
+import { UploadCloud, FileIcon, ImageIcon, ExternalLink, X, FileText, Loader2, Play, MessageSquare, ChevronDown, Plus } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { ScrollArea } from "@/components/ui/scroll-area"
 import { cn } from "@/lib/utils"
 import { ProcessingAnimation } from "@/components/documents/processing-animation"
 import {
   uploadDocuments,
+  uploadDocumentsToChat,
   processDocuments,
   getProcessingStatus,
+  listSessions,
   type ProcessingStage,
   type RAGProcessingStatus,
+  type RAGSessionListItem,
 } from "@/lib/api/rag-documents"
 
 // --- Components ---
@@ -83,6 +87,42 @@ export default function UploadPage() {
   const [errorMessage, setErrorMessage] = React.useState<string | null>(null)
   const [uploadProgress, setUploadProgress] = React.useState({ current: 0, total: 0, filename: "" })
 
+  // Session management
+  const [sessions, setSessions] = React.useState<RAGSessionListItem[]>([])
+  const [selectedSessionId, setSelectedSessionId] = React.useState<string>("")
+  const [showSessionDropdown, setShowSessionDropdown] = React.useState(false)
+  const [isLoadingSessions, setIsLoadingSessions] = React.useState(true)
+  const dropdownRef = React.useRef<HTMLDivElement>(null)
+
+  // Load sessions
+  const loadSessions = React.useCallback(async () => {
+    setIsLoadingSessions(true)
+    try {
+      const data = await listSessions()
+      setSessions(data.sessions || [])
+    } catch (err) {
+      console.error("Failed to load sessions:", err)
+    } finally {
+      setIsLoadingSessions(false)
+    }
+  }, [])
+
+  // Initial load
+  React.useEffect(() => {
+    loadSessions()
+  }, [loadSessions])
+
+  // Close dropdown when clicking outside
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setShowSessionDropdown(false)
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, [])
+
   const onFilesAdded = (newFiles: File[]) => {
     // Filter to only supported file types
     const supportedFiles = newFiles.filter(file => {
@@ -107,43 +147,35 @@ export default function UploadPage() {
     setErrorMessage(null)
 
     try {
-      // Step 1: Upload all files
-      const { sessionId: newSessionId, uploads } = await uploadDocuments(
+      // Set correct upload progress before starting
+      setUploadProgress({ 
+        current: 1, 
+        total: files.length, 
+        filename: files[0].name 
+      })
+
+      // Upload files to selected session or create new
+      const result = await uploadDocumentsToChat(
         files,
-        undefined,
-        (current, total, filename) => {
-          setUploadProgress({ current, total, filename })
-        }
+        selectedSessionId || undefined
       )
 
+      // Mark all files as uploaded
+      setUploadProgress({ 
+        current: files.length, 
+        total: files.length, 
+        filename: files[files.length - 1].name 
+      })
+
+      const newSessionId = result.metadata?.session_id || result.document_id
       setSessionId(newSessionId)
-      setPageState("processing")
-
-      // Step 2: Start processing
-      await processDocuments(newSessionId)
-
-      // Step 3: Poll for status updates
-      const pollStatus = async () => {
-        try {
-          const status = await getProcessingStatus(newSessionId)
-          setProcessingStatus(status)
-
-          if (status.stage === "ready") {
-            setPageState("ready")
-          } else if (status.stage === "error") {
-            setPageState("error")
-            setErrorMessage(status.error || "Processing failed")
-          } else {
-            // Continue polling
-            setTimeout(pollStatus, 1000)
-          }
-        } catch (error) {
-          setPageState("error")
-          setErrorMessage(error instanceof Error ? error.message : "Failed to get processing status")
-        }
-      }
-
-      pollStatus()
+      setSelectedSessionId(newSessionId)
+      
+      // Small delay to show complete progress before transitioning
+      await new Promise(resolve => setTimeout(resolve, 500))
+      
+      // New endpoints process synchronously, so we're ready immediately
+      setPageState("ready")
     } catch (error) {
       setPageState("error")
       setErrorMessage(error instanceof Error ? error.message : "An unexpected error occurred")
@@ -152,8 +184,9 @@ export default function UploadPage() {
 
   // Navigate to chat
   const handleGoToChat = () => {
-    if (sessionId) {
-      router.push(`/dashboard/documents/chat?session=${sessionId}`)
+    const targetSessionId = sessionId || selectedSessionId
+    if (targetSessionId) {
+      router.push(`/dashboard/documents/chat?session=${targetSessionId}`)
     }
   }
 
@@ -162,6 +195,7 @@ export default function UploadPage() {
     setFiles([])
     setPageState("upload")
     setSessionId(null)
+    setSelectedSessionId("")
     setProcessingStatus(null)
     setErrorMessage(null)
   }
@@ -280,12 +314,96 @@ export default function UploadPage() {
     )
   }
 
+  // Handle session selection
+  const handleSelectSession = (sessionId: string) => {
+    setSelectedSessionId(sessionId)
+    setShowSessionDropdown(false)
+  }
+
+  // Handle create new session
+  const handleCreateNewSession = () => {
+    setSelectedSessionId("")
+    setShowSessionDropdown(false)
+  }
+
+  // Check if "Chat with Documents" button should be visible
+  const showChatButton = (sessionId || selectedSessionId) && (pageState === "upload" || pageState === "ready")
+
   // Default upload view
   return (
     <div className="container mx-auto max-w-7xl p-6">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">Upload Documents</h1>
-        <p className="text-slate-500">Upload documents for Smart Docs processing and AI-powered Q&A</p>
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold tracking-tight text-slate-900">Upload Documents</h1>
+            <p className="text-slate-500">Upload documents for Smart Docs processing and AI-powered Q&A</p>
+          </div>
+          
+          {/* Session Selector */}
+          <div className="relative" ref={dropdownRef}>
+            <Button
+              variant="outline"
+              onClick={() => setShowSessionDropdown(!showSessionDropdown)}
+              className="min-w-[250px] justify-between"
+            >
+              <span className="truncate">
+                {selectedSessionId 
+                  ? `Session: ${selectedSessionId.substring(0, 20)}${selectedSessionId.length > 20 ? '...' : ''}`
+                  : 'Select Session (or create new)'}
+              </span>
+              <ChevronDown className="h-4 w-4" />
+            </Button>
+
+            {showSessionDropdown && (
+              <div className="absolute right-0 mt-2 w-[300px] max-h-[400px] bg-white rounded-lg border border-slate-200 shadow-lg z-50">
+                <ScrollArea className="max-h-[380px]">
+                  <div className="p-2">
+                    {isLoadingSessions ? (
+                      <div className="flex items-center justify-center py-4">
+                        <Loader2 className="h-4 w-4 animate-spin text-slate-400" />
+                      </div>
+                    ) : sessions.length === 0 ? (
+                      <div className="py-4 text-center text-sm text-slate-500">
+                        No sessions yet
+                      </div>
+                    ) : (
+                      <>
+                        <button
+                          onClick={handleCreateNewSession}
+                          className="w-full text-left px-3 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-md transition-colors"
+                        >
+                          <div className="flex items-center gap-2">
+                            <Plus className="h-3 w-3" />
+                            Create new session
+                          </div>
+                        </button>
+                        {sessions.map((session) => (
+                          <button
+                            key={session.session_id}
+                            onClick={() => handleSelectSession(session.session_id)}
+                            className={cn(
+                              "w-full text-left px-3 py-2 text-sm rounded-md transition-colors",
+                              selectedSessionId === session.session_id
+                                ? "bg-primary-50 text-primary-700 font-medium"
+                                : "text-slate-600 hover:bg-slate-100"
+                            )}
+                          >
+                            <div className="flex flex-col">
+                              <span className="font-medium">{session.session_id}</span>
+                              <span className="text-xs text-slate-400">
+                                {session.document_count} docs
+                              </span>
+                            </div>
+                          </button>
+                        ))}
+                      </>
+                    )}
+                  </div>
+                </ScrollArea>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
@@ -345,17 +463,49 @@ export default function UploadPage() {
                 <p className="text-xs text-slate-400">Supported: PDF, TXT, MD (Max 25MB each)</p>
               </div>
 
+              {files.length === 0 && !isDragging && (
+                <div className="flex items-center justify-between mt-8">
+                  <p className="text-sm text-slate-500">
+                    {selectedSessionId 
+                      ? `Drop files to add to session: ${selectedSessionId.substring(0, 30)}${selectedSessionId.length > 30 ? '...' : ''}`
+                      : "Drop files to create new session"}
+                  </p>
+                  {showChatButton && (
+                    <Button
+                      onClick={handleGoToChat}
+                      variant="outline"
+                      className="gap-2"
+                    >
+                      <MessageSquare className="h-4 w-4" />
+                      Chat with Documents
+                    </Button>
+                  )}
+                </div>
+              )}
+
               {files.length > 0 && (
                 <div className="mt-8">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-sm font-medium text-slate-900">Selected Files ({files.length})</h3>
-                    <Button
-                      onClick={handleProcessDocuments}
-                      className="gap-2"
-                    >
-                      <Play className="h-4 w-4" />
-                      Process {files.length} Document{files.length > 1 ? 's' : ''}
-                    </Button>
+                    <div className="flex gap-2">
+                      {showChatButton && (
+                        <Button
+                          onClick={handleGoToChat}
+                          variant="outline"
+                          className="gap-2"
+                        >
+                          <MessageSquare className="h-4 w-4" />
+                          Chat with Documents
+                        </Button>
+                      )}
+                      <Button
+                        onClick={handleProcessDocuments}
+                        className="gap-2"
+                      >
+                        <Play className="h-4 w-4" />
+                        Process {files.length} Document{files.length > 1 ? 's' : ''}
+                      </Button>
+                    </div>
                   </div>
                   <div className="space-y-2">
                     {files.map((file, i) => (

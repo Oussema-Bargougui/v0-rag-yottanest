@@ -12,28 +12,46 @@
 // Configuration
 // =============================================================================
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8001";
 
 // =============================================================================
 // Type Definitions
 // =============================================================================
 
 export interface RAGUploadResponse {
-  session_id: string;
-  filename: string;
-  size: number;
+  success: boolean;
   message: string;
+  document_name: string;
+  document_id: string;
+  chunk_count: number;
+  error?: string;
+  metadata?: {
+    session_id: string;
+    qdrant_collection: string;
+    files_processed: number;
+    total_chunks: number;
+    failed_files: number;
+  };
 }
 
-export interface RAGProcessingStatus {
-  session_id: string;
+// Legacy type for backward compatibility
+export interface RAGSessionInfo {
   found: boolean;
+  session_id: string;
   stage: ProcessingStage;
   progress: number;
   message: string;
   error: string | null;
-  files_count: number;
+  files: Array<{
+    filename: string;
+    path: string;
+    size: number;
+    uploaded_at: string;
+  }>;
   documents_processed: number;
+  chat_history_count: number;
+  created_at: string;
+  updated_at: string;
 }
 
 export type ProcessingStage =
@@ -68,29 +86,18 @@ export interface RAGQueryResponse {
   success: boolean;
   answer: string;
   sources: RAGSourceInfo[];
-  query: string;
-  chunks_used: number;
-  model: string;
-  error: string | null;
+  query_time_ms: number;
 }
 
-export interface RAGSessionInfo {
-  found: boolean;
+export interface RAGSessionListResponse {
+  sessions: RAGSessionListItem[];
+}
+
+export interface RAGSessionListItem {
   session_id: string;
-  stage: ProcessingStage;
-  progress: number;
-  message: string;
-  error: string | null;
-  files: Array<{
-    filename: string;
-    path: string;
-    size: number;
-    uploaded_at: string;
-  }>;
-  documents_processed: number;
-  chat_history_count: number;
-  created_at: string;
-  updated_at: string;
+  collection_name: string;
+  document_count: number;
+  created_date: string | null;
 }
 
 export interface APIError {
@@ -120,30 +127,29 @@ async function handleResponse<T>(response: Response): Promise<T> {
 }
 
 // =============================================================================
-// API Functions
+// API Functions - Chat Endpoints
 // =============================================================================
 
 /**
- * Upload a document to the RAG system
+ * Upload documents to a chat session using the new chat endpoint
  *
- * @param file - The file to upload
+ * @param files - Array of files to upload
  * @param sessionId - Optional existing session ID (creates new if not provided)
- * @returns Upload response with session ID
+ * @returns Upload response with session ID and metadata
  */
-export async function uploadDocument(
-  file: File,
+export async function uploadDocumentsToChat(
+  files: File[],
   sessionId?: string
 ): Promise<RAGUploadResponse> {
   try {
     const formData = new FormData();
-    formData.append("file", file);
+    files.forEach((file) => formData.append("files", file));
 
-    let url = `${API_BASE_URL}/api/rag/upload`;
     if (sessionId) {
-      url += `?session_id=${encodeURIComponent(sessionId)}`;
+      formData.append("session_id", sessionId);
     }
 
-    const response = await fetch(url, {
+    const response = await fetch(`${API_BASE_URL}/api/v1/chat/ingest`, {
       method: "POST",
       body: formData,
     });
@@ -153,7 +159,7 @@ export async function uploadDocument(
     if (error instanceof Error) {
       if (error.message === "Failed to fetch") {
         throw new Error(
-          "Unable to connect to the server. Please ensure the backend is running."
+          "Unable to connect to server. Please ensure backend is running."
         );
       }
       throw error;
@@ -163,134 +169,47 @@ export async function uploadDocument(
 }
 
 /**
- * Upload multiple documents to the RAG system
+ * Upload a single document (legacy, uses new chat endpoint)
  *
- * @param files - Array of files to upload
+ * @param file - The file to upload
  * @param sessionId - Optional existing session ID
- * @param onProgress - Optional callback for upload progress
- * @returns Array of upload responses
+ * @returns Upload response with session ID
  */
-export async function uploadDocuments(
-  files: File[],
-  sessionId?: string,
-  onProgress?: (current: number, total: number, filename: string) => void
-): Promise<{ sessionId: string; uploads: RAGUploadResponse[] }> {
-  const uploads: RAGUploadResponse[] = [];
-  let currentSessionId = sessionId;
-
-  for (let i = 0; i < files.length; i++) {
-    const file = files[i];
-    onProgress?.(i + 1, files.length, file.name);
-
-    const result = await uploadDocument(file, currentSessionId);
-    uploads.push(result);
-
-    // Use the session ID from the first upload for subsequent uploads
-    if (!currentSessionId) {
-      currentSessionId = result.session_id;
-    }
-  }
-
-  return {
-    sessionId: currentSessionId || "",
-    uploads,
-  };
+export async function uploadDocument(
+  file: File,
+  sessionId?: string
+): Promise<RAGUploadResponse> {
+  const result = await uploadDocumentsToChat([file], sessionId);
+  return result;
 }
 
 /**
- * Start processing uploaded documents
+ * Query documents in a chat session
  *
- * @param sessionId - Session ID containing uploaded documents
- * @returns Processing result
- */
-export async function processDocuments(
-  sessionId: string
-): Promise<RAGProcessResponse> {
-  try {
-    const response = await fetch(
-      `${API_BASE_URL}/api/rag/process?session_id=${encodeURIComponent(sessionId)}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-
-    return handleResponse<RAGProcessResponse>(response);
-  } catch (error) {
-    if (error instanceof Error) {
-      if (error.message === "Failed to fetch") {
-        throw new Error(
-          "Unable to connect to the server. Please ensure the backend is running."
-        );
-      }
-      throw error;
-    }
-    throw new Error("An unexpected error occurred during processing");
-  }
-}
-
-/**
- * Get the current processing status for a session
- *
- * @param sessionId - Session ID to check
- * @returns Processing status
- */
-export async function getProcessingStatus(
-  sessionId: string
-): Promise<RAGProcessingStatus> {
-  try {
-    const response = await fetch(
-      `${API_BASE_URL}/api/rag/status/${encodeURIComponent(sessionId)}`
-    );
-
-    return handleResponse<RAGProcessingStatus>(response);
-  } catch (error) {
-    if (error instanceof Error) {
-      if (error.message === "Failed to fetch") {
-        throw new Error("Unable to connect to the server.");
-      }
-      throw error;
-    }
-    throw new Error("An unexpected error occurred");
-  }
-}
-
-/**
- * Query processed documents and get an AI-generated answer
- *
- * @param sessionId - Session ID with processed documents
+ * @param sessionId - Session ID to query
  * @param query - Question to ask
- * @param topK - Number of relevant chunks to retrieve (default: 5)
  * @returns Query response with answer and sources
  */
 export async function queryDocuments(
   sessionId: string,
-  query: string,
-  topK: number = 5
+  query: string
 ): Promise<RAGQueryResponse> {
   try {
-    const response = await fetch(
-      `${API_BASE_URL}/api/rag/query?session_id=${encodeURIComponent(sessionId)}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          query,
-          top_k: topK,
-        }),
-      }
-    );
+    const formData = new FormData();
+    formData.append("session_id", sessionId);
+    formData.append("query", query);
+
+    const response = await fetch(`${API_BASE_URL}/api/v1/chat/query`, {
+      method: "POST",
+      body: formData,
+    });
 
     return handleResponse<RAGQueryResponse>(response);
   } catch (error) {
     if (error instanceof Error) {
       if (error.message === "Failed to fetch") {
         throw new Error(
-          "Unable to connect to the server. Please ensure the backend and Ollama are running."
+          "Unable to connect to server. Please ensure backend is running."
         );
       }
       throw error;
@@ -300,93 +219,192 @@ export async function queryDocuments(
 }
 
 /**
- * Get comprehensive information about a session
+ * List all chat sessions
  *
- * @param sessionId - Session ID to query
- * @returns Session information
+ * @returns List of all sessions with metadata
  */
-export async function getSessionInfo(
-  sessionId: string
-): Promise<RAGSessionInfo> {
+export async function listSessions(): Promise<{ sessions: RAGSessionListItem[] }> {
   try {
-    const response = await fetch(
-      `${API_BASE_URL}/api/rag/session/${encodeURIComponent(sessionId)}`
-    );
-
-    return handleResponse<RAGSessionInfo>(response);
+    const response = await fetch(`${API_BASE_URL}/api/v1/chat/sessions`);
+    const data = await handleResponse<{ sessions: RAGSessionListItem[] }>(response);
+    return data;
   } catch (error) {
     if (error instanceof Error) {
       if (error.message === "Failed to fetch") {
-        throw new Error("Unable to connect to the server.");
+        throw new Error(
+          "Unable to connect to server. Please ensure backend is running."
+        );
       }
       throw error;
     }
-    throw new Error("An unexpected error occurred");
+    throw new Error("An unexpected error occurred while listing sessions");
   }
 }
 
 /**
- * Delete a session and clean up its resources
+ * Rename a session
+ *
+ * @param sessionId - Session ID to rename
+ * @param name - New name for the session
+ * @returns Success status
+ */
+export async function renameSession(
+  sessionId: string,
+  name: string
+): Promise<{ success: boolean; message: string; session_id: string; name: string }> {
+  try {
+    const formData = new FormData();
+    formData.append("name", name);
+
+    const response = await fetch(`${API_BASE_URL}/api/v1/chat/sessions/${encodeURIComponent(sessionId)}/name`, {
+      method: "PUT",
+      body: formData,
+    });
+
+    return handleResponse<{ success: boolean; message: string; session_id: string; name: string }>(response);
+  } catch (error) {
+    if (error instanceof Error) {
+      if (error.message === "Failed to fetch") {
+        throw new Error(
+          "Unable to connect to server. Please ensure backend is running."
+        );
+      }
+      throw error;
+    }
+    throw new Error("An unexpected error occurred while renaming session");
+  }
+}
+
+/**
+ * Delete a session
  *
  * @param sessionId - Session ID to delete
  * @returns Success status
  */
 export async function deleteSession(
   sessionId: string
-): Promise<{ success: boolean; message: string }> {
+): Promise<{ success: boolean; message: string; session_id: string }> {
   try {
-    const response = await fetch(
-      `${API_BASE_URL}/api/rag/session/${encodeURIComponent(sessionId)}`,
-      {
-        method: "DELETE",
-      }
-    );
+    const response = await fetch(`${API_BASE_URL}/api/v1/chat/sessions/${encodeURIComponent(sessionId)}`, {
+      method: "DELETE",
+    });
 
-    return handleResponse<{ success: boolean; message: string }>(response);
+    return handleResponse<{ success: boolean; message: string; session_id: string }>(response);
   } catch (error) {
     if (error instanceof Error) {
       if (error.message === "Failed to fetch") {
-        throw new Error("Unable to connect to the server.");
+        throw new Error(
+          "Unable to connect to server. Please ensure backend is running."
+        );
       }
       throw error;
     }
-    throw new Error("An unexpected error occurred");
+    throw new Error("An unexpected error occurred while deleting session");
   }
 }
 
 /**
- * Poll processing status until complete or error
+ * Upload multiple documents using the new chat endpoint
  *
- * @param sessionId - Session ID to poll
- * @param onStatusChange - Callback for status updates
- * @param intervalMs - Polling interval in milliseconds (default: 1000)
- * @returns Final processing status
+ * @param files - Array of files to upload
+ * @param sessionId - Optional existing session ID
+ * @param onProgress - Optional callback for upload progress
+ * @returns Upload response with session ID
+ */
+export async function uploadDocuments(
+  files: File[],
+  sessionId?: string,
+  onProgress?: (current: number, total: number, filename: string) => void
+): Promise<{ sessionId: string; uploads: RAGUploadResponse[] }> {
+  if (onProgress) {
+    // For progress tracking, upload files one by one
+    const uploads: RAGUploadResponse[] = [];
+    let currentSessionId = sessionId;
+
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      onProgress(i + 1, files.length, file.name);
+
+      const result = await uploadDocumentsToChat([file], currentSessionId);
+      uploads.push(result);
+
+      // Use session ID from first upload for subsequent uploads
+      if (!currentSessionId) {
+        currentSessionId = result.metadata?.session_id;
+      }
+    }
+
+    return {
+      sessionId: currentSessionId || "",
+      uploads,
+    };
+  } else {
+    // Without progress tracking, upload all at once
+    const result = await uploadDocumentsToChat(files, sessionId);
+    const sessionIdToReturn = result.metadata?.session_id || sessionId || "";
+
+    return {
+      sessionId: sessionIdToReturn,
+      uploads: [result],
+    };
+  }
+}
+
+// =============================================================================
+// Legacy Functions (kept for backward compatibility)
+// =============================================================================
+
+/**
+ * Start processing uploaded documents (legacy - no longer used)
+ */
+export async function processDocuments(
+  sessionId: string
+): Promise<RAGProcessResponse> {
+  // Processing is now automatic with new chat endpoints
+  // This function is kept for backward compatibility but does nothing
+  return {
+    success: true,
+    session_id: sessionId,
+    documents_processed: 0,
+    chunks_created: 0,
+    embeddings_generated: 0,
+    message: "Processing is automatic with new endpoints",
+    error: null,
+  };
+}
+
+/**
+ * Get current processing status (legacy - no longer used)
+ */
+export async function getProcessingStatus(
+  sessionId: string
+): Promise<RAGSessionInfo> {
+  // Status is now automatic with new chat endpoints
+  return {
+    session_id: sessionId,
+    found: true,
+    stage: "ready",
+    progress: 100,
+    message: "Ready",
+    error: null,
+    files: [],
+    documents_processed: 0,
+    chat_history_count: 0,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+  };
+}
+
+/**
+ * Poll processing status (legacy - no longer used)
  */
 export async function pollProcessingStatus(
   sessionId: string,
-  onStatusChange?: (status: RAGProcessingStatus) => void,
+  onStatusChange?: (status: RAGSessionInfo) => void,
   intervalMs: number = 1000
-): Promise<RAGProcessingStatus> {
-  return new Promise((resolve, reject) => {
-    const poll = async () => {
-      try {
-        const status = await getProcessingStatus(sessionId);
-        onStatusChange?.(status);
-
-        if (status.stage === "ready") {
-          resolve(status);
-        } else if (status.stage === "error") {
-          reject(new Error(status.error || "Processing failed"));
-        } else {
-          setTimeout(poll, intervalMs);
-        }
-      } catch (error) {
-        reject(error);
-      }
-    };
-
-    poll();
-  });
+): Promise<RAGSessionInfo> {
+  // Processing is now automatic
+  return getProcessingStatus(sessionId);
 }
 
 // =============================================================================

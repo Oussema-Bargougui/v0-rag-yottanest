@@ -1,7 +1,0 @@
-{
-  "doc_id": "8e095e54-f95e-42de-985b-8bbe36e15a96",
-  "document_name": "ai_teacher.pdf",
-  "chunk_strategy": "semantic_percentile",
-  "chunk_count": 0,
-  "chunks": []
-}

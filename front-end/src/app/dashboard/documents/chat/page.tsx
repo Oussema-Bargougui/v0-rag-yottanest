@@ -14,18 +14,18 @@ import {
   AlertCircle,
   ArrowLeft,
   Upload,
+  Plus,
 } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { cn } from "@/lib/utils"
+import { SessionList } from "@/components/documents/session-list"
 import {
   queryDocuments,
-  getSessionInfo,
   type RAGQueryResponse,
   type RAGSourceInfo,
-  type RAGSessionInfo,
 } from "@/lib/api/rag-documents"
 
 // --- Types ---
@@ -174,8 +174,13 @@ export default function ChatPage() {
   const [messages, setMessages] = React.useState<ChatMessage[]>([])
   const [inputValue, setInputValue] = React.useState("")
   const [isLoading, setIsLoading] = React.useState(false)
-  const [sessionInfo, setSessionInfo] = React.useState<RAGSessionInfo | null>(null)
   const [error, setError] = React.useState<string | null>(null)
+  
+  // Session management state
+  const [selectedSessionId, setSelectedSessionId] = React.useState<string | null>(
+    sessionId || null
+  )
+  const [showUploadDialog, setShowUploadDialog] = React.useState(false)
 
   const messagesEndRef = React.useRef<HTMLDivElement>(null)
   const inputRef = React.useRef<HTMLInputElement>(null)
@@ -185,33 +190,45 @@ export default function ChatPage() {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
   }, [messages])
 
-  // Load session info on mount
+  // Update URL when session changes
   React.useEffect(() => {
-    if (sessionId) {
-      getSessionInfo(sessionId)
-        .then(setSessionInfo)
-        .catch((err) => setError(err.message))
+    if (selectedSessionId) {
+      router.push(`/dashboard/documents/chat?session=${encodeURIComponent(selectedSessionId)}`)
+    } else {
+      router.push("/dashboard/documents/upload")
     }
-  }, [sessionId])
+  }, [selectedSessionId, router])
+
+  // Handle session selection
+  const handleSelectSession = (newSessionId: string) => {
+    setSelectedSessionId(newSessionId)
+    setMessages([])
+    setInputValue("")
+    setError(null)
+  }
+
+  // Handle create new session
+  const handleCreateSession = () => {
+    setShowUploadDialog(true)
+  }
 
   // Add welcome message
   React.useEffect(() => {
-    if (sessionInfo && messages.length === 0) {
-      const filesCount = sessionInfo.files?.length || 0
+    if (selectedSessionId && messages.length === 0) {
       setMessages([
         {
           id: "welcome",
           type: "assistant",
-          content: `Hello! I've analyzed ${filesCount} document${filesCount > 1 ? "s" : ""} for you. Ask me anything about the content and I'll help you find the information you need.\n\nFor compliance and KYC analysis, try asking questions like:\n• "What are the key findings in these documents?"\n• "Are there any risk indicators mentioned?"\n• "Summarize the main points"`,
+          content: `Hello! I've analyzed documents for you. Ask me anything about the content and I'll help you find the information you need.\n\nFor compliance and KYC analysis, try asking questions like:\n• "What are the key findings in these documents?"\n• "Are there any risk indicators mentioned?"\n• "Summarize the main points"`,
           timestamp: new Date(),
         },
       ])
     }
-  }, [sessionInfo, messages.length])
+  }, [selectedSessionId, messages.length])
 
   // Handle sending a message
   const handleSendMessage = async () => {
-    if (!inputValue.trim() || !sessionId || isLoading) return
+    if (!inputValue.trim() || !selectedSessionId || isLoading) return
 
     const userMessage: ChatMessage = {
       id: `user-${Date.now()}`,
@@ -225,7 +242,7 @@ export default function ChatPage() {
     setIsLoading(true)
 
     try {
-      const response = await queryDocuments(sessionId, userMessage.content)
+      const response = await queryDocuments(selectedSessionId, userMessage.content)
 
       const assistantMessage: ChatMessage = {
         id: `assistant-${Date.now()}`,
@@ -233,7 +250,6 @@ export default function ChatPage() {
         content: response.answer,
         sources: response.sources,
         timestamp: new Date(),
-        error: response.error || undefined,
       }
 
       setMessages((prev) => [...prev, assistantMessage])
@@ -261,8 +277,8 @@ export default function ChatPage() {
     }
   }
 
-  // No session ID provided
-  if (!sessionId) {
+  // No session selected
+  if (!selectedSessionId) {
     return (
       <div className="container mx-auto max-w-4xl p-6">
         <Card>
@@ -271,14 +287,24 @@ export default function ChatPage() {
               <div className="w-16 h-16 rounded-full bg-neutral-100 flex items-center justify-center mb-4">
                 <FileText className="w-8 h-8 text-neutral-400" />
               </div>
-              <h2 className="text-xl font-semibold text-neutral-800 mb-2">No Documents Loaded</h2>
+              <h2 className="text-xl font-semibold text-neutral-800 mb-2">No Session Selected</h2>
               <p className="text-neutral-500 mb-6 max-w-md">
-                You need to upload and process documents before you can chat with them.
+                Select an existing session or upload documents to create a new one.
               </p>
-              <Button onClick={() => router.push("/dashboard/documents/upload")} className="gap-2">
-                <Upload className="w-4 h-4" />
-                Upload Documents
-              </Button>
+              <div className="flex gap-3">
+                <Button onClick={handleCreateSession} className="gap-2">
+                  <Plus className="w-4 h-4" />
+                  Upload Documents
+                </Button>
+                <Button
+                  variant="outline"
+                  onClick={() => router.push("/dashboard/documents/upload")}
+                  className="gap-2"
+                >
+                  <Upload className="w-4 h-4" />
+                  Go to Upload Page
+                </Button>
+              </div>
             </div>
           </CardContent>
         </Card>
@@ -310,27 +336,31 @@ export default function ChatPage() {
   }
 
   return (
-    <div className="container mx-auto max-w-6xl p-6 h-[calc(100vh-120px)] flex flex-col">
+    <div className="container mx-auto max-w-7xl p-6 h-[calc(100vh-120px)] flex flex-col">
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-4">
-          <Button
-            variant="ghost"
-            size="icon-sm"
-            onClick={() => router.push("/dashboard/documents/upload")}
-          >
-            <ArrowLeft className="w-4 h-4" />
-          </Button>
-          <div>
-            <h1 className="text-2xl font-bold text-neutral-900">Chat with Documents</h1>
-            <p className="text-sm text-neutral-500">
-              {sessionInfo?.files?.length || 0} document{(sessionInfo?.files?.length || 0) > 1 ? "s" : ""} loaded
-            </p>
-          </div>
+          <h1 className="text-2xl font-bold text-neutral-900">Chat with Documents</h1>
+          <p className="text-sm text-neutral-500">
+            Session: {selectedSessionId}
+          </p>
         </div>
+        <Button onClick={handleCreateSession} className="gap-2">
+          <Plus className="w-4 h-4" />
+          Upload Documents
+        </Button>
       </div>
 
       <div className="flex gap-6 flex-1 min-h-0">
+        {/* Session List Sidebar */}
+        <div className="w-80 flex-shrink-0 hidden lg:block">
+          <SessionList
+            selectedSessionId={selectedSessionId}
+            onSelectSession={handleSelectSession}
+            onCreateSession={handleCreateSession}
+          />
+        </div>
+
         {/* Chat Area */}
         <Card className="flex-1 flex flex-col min-h-0">
           <ScrollArea className="flex-1 p-4">
@@ -374,36 +404,24 @@ export default function ChatPage() {
           </div>
         </Card>
 
-        {/* Sidebar - Document Info */}
-        <Card className="w-80 hidden lg:block">
+        {/* Right Sidebar - Session Info */}
+        <Card className="w-72 hidden lg:block">
           <CardHeader>
-            <CardTitle className="text-base">Loaded Documents</CardTitle>
+            <CardTitle className="text-base">Session Info</CardTitle>
           </CardHeader>
           <CardContent>
-            <ScrollArea className="h-[400px]">
-              <div className="space-y-2">
-                {sessionInfo?.files?.map((file, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-2 p-2 bg-neutral-50 rounded-lg"
-                  >
-                    <div className="w-8 h-8 rounded bg-red-100 flex items-center justify-center">
-                      <FileText className="w-4 h-4 text-red-500" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-neutral-700 truncate">
-                        {file.filename}
-                      </p>
-                      <p className="text-xs text-neutral-400">
-                        {(file.size / 1024).toFixed(1)} KB
-                      </p>
-                    </div>
-                  </div>
-                ))}
+            <div className="space-y-4">
+              <div>
+                <p className="text-xs text-muted-foreground mb-1">Session ID</p>
+                <p className="text-sm font-medium truncate">{selectedSessionId}</p>
               </div>
-            </ScrollArea>
+              <div>
+                <p className="text-xs text-muted-foreground mb-1">Messages</p>
+                <p className="text-sm">{messages.length}</p>
+              </div>
+            </div>
 
-            <div className="mt-4 pt-4 border-t border-neutral-200">
+            <div className="mt-6 pt-4 border-t border-neutral-200">
               <Button
                 variant="outline"
                 className="w-full gap-2"
